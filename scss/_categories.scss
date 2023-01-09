@@ -1,0 +1,108 @@
+@import "mixins";
+.categories {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: 0.3s;
+  margin-top: 170px;
+  .categoriesTittle {
+    height: 25px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  span {
+    margin-left: 5px;
+    color: #d87d4a;
+    width: 5px;
+    height: 10px;
+    font-size: 2rem;
+    font-family: "Manrope";
+    font-weight: 700;
+  }
+  a {
+    text-decoration: none;
+    width: 32%;
+  }
+  @include media("sm") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    a {
+      width: 100%;
+    }
+  }
+  @include media('lg'){
+    .categoriesTittle{
+        font-size: 1.5rem;
+    }
+  }
+}
+.eachCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+  img {
+    margin-top: -40px;
+    width: 130.49px;
+    height: 120px;
+  }
+  &:hover {
+    .shop1 {
+      color: #d87d4a;
+      opacity: 1;
+    }
+    .shop2 {
+      color: #d87d4a;
+      opacity: 1;
+    }
+    .shop3 {
+      color: #d87d4a;
+      opacity: 1;
+    }
+  }
+}
+
+.categories .shop1,
+.shop2,
+.shop3 {
+  height: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.shopDiv {
+  margin-left: 10px;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  span {
+    margin-top: -22px;
+  }
+}

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+@import "../navbar";
+@import "../categories";
+@import "../bestgear";
+@import "../footer";
+@import "../category/categoryNav";
+@import "productMain";
+@import "../mainDiv";
+@import "features";
+@import "youmayalsolike";
+@import "../buttonPrimary";
+@import "images";
+@import "../goBack";
+@import "../fontSize";
+body {
+  margin: 0;
+  padding: 0;
+}
+#indexNavbar {
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    li {
+      &:nth-child(1n) {
+        a {
+          color: #ffffff;
+          &:hover {
+            color: #d87d4a;
+          }
+        }
+      }
+    }
+    @include media("lg") {
+      display: none;
+    }
+  }
+}
+.productLeft {
+  background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg);
+  @include media("lg") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg);
+  }
+  @include media("sm") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg);
+  }
+}
+.alsoLikeProductDiv {
+  &:nth-child(1) {
+    .imagesBack {
+      background-image: url(../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg);
+      @include media("md") {
+        background-image: url(../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg);
+      }
+    }
+  }
+  &:nth-child(2) {
+    .imagesBack {
+      background-image: url(../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg);
+      @include media("md") {
+        background-image: url(../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg);
+      }
+    }
+  }
+  &:nth-child(3) {
+    .imagesBack {
+      background-image: url(../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg);
+      @include media("md") {
+        background-image: url(../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg);
+      }
+    }
+  }
+}
+// grid
+.col:nth-child(1) {
+  background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg);
+  @include media("md") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg);
+  }
+  @include media("sm") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg);
+  }
+}
+.col:nth-child(2) {
+  background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg);
+  @include media("md") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg);
+  }
+  @include media("sm") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg);
+  }
+}
+.col:nth-child(3) {
+  background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg);
+  @include media("md") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg);
+  }
+  @include media("sm") {
+    background-image: url(../assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg);
+  }
+}

@@ -1,0 +1,134 @@
+@import "../mixins";
+.zx9speakers {
+  width: 100%;
+  height: 560px;
+  margin: 130px auto 0 auto;
+  background-color: #d87d4a;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.9s;
+  @include media("lg") {
+    height: auto;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+}
+.circle {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/home/desktop/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position-x: -250px;
+  background-position-y: -200px;
+  background-size: cover;
+  overflow: hidden;
+  img {
+    height: 80%;
+    margin-bottom: -8px;
+    @include media("lg") {
+      width: 197px;
+      height: 237px;
+    }
+    @include media("sm") {
+      width: 170px;
+      height: 206px;
+    }
+  }
+  @include media("lg") {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-position: center;
+  }
+}
+.zxImage {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  @include media("lg") {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.zxDescription {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  @include media("lg") {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.zxDescription {
+  h2 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 5.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    width: 300px;
+
+    @include media("sm") {
+      font-size: 3.6rem;
+      width: 200px;
+      line-height: 1;
+    }
+  }
+  p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    @include media("lg") {
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-bottom: 30px;
+    }
+    @include media("sm") {
+    }
+  }
+  button {
+    width: 160px;
+    height: 48px;
+    color: #ffff;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    font-style: normal;
+    &:hover {
+      background-color: #ffff;
+      color: #000000;
+      border: 1px solid #000000;
+    }
+  }
+  @include media("lg") {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

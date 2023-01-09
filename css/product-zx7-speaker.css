@@ -1,0 +1,1317 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+.dark-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transition: 0.9s;
+}
+
+.dark-overlay2 {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: 0.9s;
+}
+
+.burger {
+  display: none;
+}
+
+.burgerMenu {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  width: 95%;
+}
+@media screen and (max-width: 927px) {
+  .burgerMenu {
+    margin: auto;
+    width: 100%;
+    margin-top: -100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #ffffff;
+    padding: 70px 10px 70px 10px;
+    transition: opacity 0.7s, margin 0.7s;
+  }
+  .burgerMenu .categoriesTittle {
+    height: 25px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .burgerMenu .shop1,
+  .burgerMenu .shop2,
+  .burgerMenu .shop3 {
+    height: 18px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+  .burgerMenu span {
+    margin-left: 5px;
+    color: #d87d4a;
+    width: 5px;
+    height: 10px;
+    font-size: 2rem;
+    font-family: "Manrope";
+    font-weight: 700;
+  }
+  .burgerMenu a {
+    text-decoration: none;
+    width: 32%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+  }
+  .burgerMenu a {
+    width: 90%;
+  }
+}
+
+#indexNavbar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #191919;
+  align-items: center;
+  width: 1110px;
+  height: 89px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+  box-sizing: border-box;
+}
+#indexNavbar .mobileLogo {
+  display: none;
+}
+#indexNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#indexNavbar ul li:first-child a {
+  color: #d87d4a;
+}
+#indexNavbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+}
+#indexNavbar ul li a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 1110px) {
+  #indexNavbar {
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 927px) {
+  #indexNavbar {
+    z-index: 2;
+  }
+  #indexNavbar ul {
+    display: none;
+  }
+  #indexNavbar .leftNav .burger {
+    display: block;
+    margin-top: 5px;
+  }
+  #indexNavbar .leftNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #indexNavbar .mobileLogo {
+    display: block;
+  }
+  #indexNavbar .leftNav {
+    gap: 0px;
+  }
+  #indexNavbar .leftNav .desktopLogo {
+    display: none;
+  }
+}
+
+/* below is card popup styling */
+.productListCard {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seeMyProduct {
+  gap: 25px;
+  position: fixed;
+  width: 377px;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+  right: 200px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .seeMyProduct {
+    right: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .seeMyProduct {
+    width: 90%;
+  }
+}
+
+.firstCart {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartQuantity {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.firstCart a {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-decoration-line: underline;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.firstCart a:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.productQuantity {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantityOfProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 32px;
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 480px) {
+  .quantityOfProduct {
+    width: 85px;
+  }
+}
+
+.quantityOfProduct div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quantityOfProduct div:nth-child(2n) {
+  height: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+}
+.quantityOfProduct div:first-child, .quantityOfProduct div:last-child {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.25;
+}
+
+.quantityOfProduct div:first-child:hover,
+.quantityOfProduct div:last-child:hover {
+  color: #d87d4a;
+  opacity: 1;
+  background-color: #e3e3e3;
+}
+
+.minSpecificationProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 64px;
+}
+
+.minSpecificationProduct article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.minSpecificationProduct img {
+  width: 64px;
+  border-radius: 8px;
+}
+.minSpecificationProduct h6 {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  margin: 0;
+}
+.minSpecificationProduct p {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+.totalPrice p {
+  margin: 0;
+}
+.totalPrice p:first-child {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.totalPrice p:last-child {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.goToCheckout {
+  display: flex;
+  width: 95%;
+  height: 48px;
+}
+.goToCheckout a {
+  width: 100%;
+  height: 100%;
+  background: #d87d4a;
+  font-family: "Manrope";
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.categories {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: 0.3s;
+  margin-top: 170px;
+}
+.categories .categoriesTittle {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.categories span {
+  margin-left: 5px;
+  color: #d87d4a;
+  width: 5px;
+  height: 10px;
+  font-size: 2rem;
+  font-family: "Manrope";
+  font-weight: 700;
+}
+.categories a {
+  text-decoration: none;
+  width: 32%;
+}
+@media screen and (max-width: 480px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+  }
+  .categories a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .categories .categoriesTittle {
+    font-size: 1.5rem;
+  }
+}
+
+.eachCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.eachCategories img {
+  margin-top: -40px;
+  width: 130.49px;
+  height: 120px;
+}
+.eachCategories:hover .shop1 {
+  color: #d87d4a;
+  opacity: 1;
+}
+.eachCategories:hover .shop2 {
+  color: #d87d4a;
+  opacity: 1;
+}
+.eachCategories:hover .shop3 {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.categories .shop1,
+.shop2,
+.shop3 {
+  height: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.shopDiv {
+  margin-left: 10px;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.shopDiv span {
+  margin-top: -22px;
+}
+
+.advertisment {
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 588px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.9s;
+}
+@media screen and (max-width: 927px) {
+  .advertisment {
+    flex-direction: column-reverse;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.advertImage {
+  background-image: url(../assets/shared/desktop/image-best-gear.jpg);
+  width: 49%;
+  height: 100%;
+  border-radius: 8px;
+  background-position: center;
+}
+@media screen and (max-width: 927px) {
+  .advertImage {
+    width: 100%;
+    background-image: url(../assets/shared/tablet/image-best-gear.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .advertImage {
+    background-image: url(../assets/shared/mobile/image-best-gear.jpg);
+    height: 300px;
+    background-size: cover;
+  }
+}
+
+.advertArticle {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 1px;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.advertArticle h1 {
+  width: 90%;
+  margin-bottom: 20px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.advertArticle p {
+  width: 93%;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media screen and (max-width: 927px) {
+  .advertArticle {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.bestGear {
+  color: #d87d4a;
+}
+
+.homeFooter {
+  margin-top: 200px;
+  width: 100%;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeFooter #footerNavbar {
+  background-color: #101010;
+  border: none;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.homeFooter #footerNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.homeFooter #footerNavbar ul li:first-child a {
+  color: #d87d4a;
+}
+.homeFooter #footerNavbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+}
+.homeFooter #footerNavbar ul li a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 927px) {
+  .homeFooter #footerNavbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .homeFooter #footerNavbar ul {
+    padding: 0;
+  }
+  .homeFooter #footerNavbar ul li a {
+    margin: 0 25px 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homeFooter #footerNavbar {
+    align-items: center;
+  }
+  .homeFooter #footerNavbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .homeFooter #footerNavbar ul li a {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 927px) {
+  .homeFooter {
+    width: 100%;
+  }
+}
+
+.homeFooter #footerNavbar ul li:first-child a {
+  color: #ffffff;
+}
+
+.homeFooter #footerNavbar ul li:first-child a:hover {
+  color: #d87d4a;
+}
+
+.middleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.aboutUs {
+  font-family: Manrope;
+  font-weight: 400;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 0.5;
+  width: 50%;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .aboutUs {
+    width: 100%;
+  }
+}
+
+.middleFooter .socIcons {
+  display: flex;
+  gap: 15px;
+}
+.middleFooter .socIcons img:hover {
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(0deg) brightness(0.9);
+}
+@media screen and (max-width: 480px) {
+  .middleFooter .socIcons {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .middleFooter {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.middleFooter img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.middleFooter img:hover {
+  filter: brightness(150%);
+}
+
+.innerFooter {
+  width: 1110px;
+}
+@media screen and (max-width: 1110px) {
+  .innerFooter {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .innerFooter {
+    width: 97%;
+  }
+}
+
+.lastElementFooter {
+  padding: 15px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media screen and (max-width: 480px) {
+  .lastElementFooter {
+    text-align: center;
+  }
+}
+
+.socIconsForMobile {
+  display: none;
+  gap: 15px;
+}
+@media screen and (max-width: 480px) {
+  .socIconsForMobile {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+}
+
+#homeHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #191919;
+}
+
+.productDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 560px;
+  gap: 25px;
+}
+.productDiv .productLeft {
+  width: 50%;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+}
+@media screen and (max-width: 927px) {
+  .productDiv .productLeft {
+    width: 100%;
+    height: 480px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productDiv .productLeft {
+    height: 352px;
+  }
+}
+.productDiv .productRight {
+  padding-left: 124px;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.productDiv .productRight h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #d87d4a;
+}
+.productDiv .productRight h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media screen and (max-width: 927px) {
+  .productDiv .productRight h1 {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+}
+.productDiv .productRight p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.productDiv .productRight a button {
+  border: none;
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  font-family: Manrope;
+  font-size: 1.3rem;
+  line-height: 1.776rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.productDiv .productRight a button:hover {
+  background-color: #fbaf85;
+}
+.productDiv .productRight h5 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .productDiv .productRight .buyProduct {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 927px) {
+  .productDiv .productRight {
+    width: 100%;
+    padding-left: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productDiv .productRight {
+    text-align: center;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 927px) {
+  .productDiv {
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productDiv {
+    flex-direction: column;
+  }
+}
+
+.buyProduct {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+}
+.buyProduct div {
+  height: 48px;
+  width: 130px;
+}
+.buyProduct div div {
+  cursor: pointer;
+}
+
+.mainDiv {
+  margin: auto;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1110px) {
+  .mainDiv {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .mainDiv {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainDiv {
+    width: 90%;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 25px;
+  margin-top: 163px;
+}
+.features h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.features p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.features span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #d87d4a;
+}
+@media screen and (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    margin-top: 122px;
+  }
+}
+
+.featuresLeft {
+  width: 55%;
+}
+@media screen and (max-width: 768px) {
+  .featuresLeft {
+    width: 100%;
+  }
+}
+
+.featuresRight {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+.featuresRight .gifts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.featuresRight .gifts div {
+  display: flex;
+  gap: 10px;
+}
+.featuresRight .gifts div p {
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .featuresRight {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .featuresRight h1 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .featuresRight {
+    flex-direction: column;
+  }
+}
+
+.seeMore {
+  margin-top: 120px;
+}
+.seeMore h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.seeMore .alsoLikeProduct {
+  display: flex;
+  justify-content: space-between;
+}
+.seeMore .alsoLikeProduct .imagesBack {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  height: 318px;
+  width: 100%;
+}
+.seeMore .alsoLikeProduct div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  .seeMore .alsoLikeProduct div {
+    width: 333px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .seeMore .alsoLikeProduct div {
+    width: 90%;
+  }
+}
+.seeMore .alsoLikeProduct div h2 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .seeMore .alsoLikeProduct {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+}
+.seeMore button {
+  border: none;
+}
+
+.seeMainProduct {
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  font-family: Manrope;
+  font-size: 1.3rem;
+  line-height: 1.776rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.seeMainProduct:hover {
+  background-color: #fbaf85;
+}
+
+.grid {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 2fr 2fr;
+  height: 592px;
+  gap: 30px;
+  align-content: space-between;
+}
+@media screen and (max-width: 927px) {
+  .grid {
+    height: 368px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid {
+    height: auto;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.col {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.col:nth-child(2) {
+  grid-row: span 2;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .col:nth-child(2) {
+    height: 368px;
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col:nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+    height: 174px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col:nth-child(3) {
+    grid-row: span 2;
+    grid-column: span 2;
+    height: 174px;
+  }
+}
+
+.goBack {
+  margin-top: 50px;
+}
+.goBack h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 20%;
+}
+.goBack h6:hover {
+  text-decoration: underline;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#indexNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#indexNavbar ul li:nth-child(1n) a {
+  color: #ffffff;
+}
+#indexNavbar ul li:nth-child(1n) a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 927px) {
+  #indexNavbar ul {
+    display: none;
+  }
+}
+
+.productLeft {
+  background-image: url(../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg);
+}
+@media screen and (max-width: 927px) {
+  .productLeft {
+    background-image: url(../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg);
+  }
+}
+@media screen and (max-width: 480px) {
+  .productLeft {
+    background-image: url(../assets/product-zx7-speaker/mobile/image-category-page-preview.jpg);
+  }
+}
+
+.alsoLikeProductDiv:nth-child(1) .imagesBack {
+  background-image: url(../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg);
+}
+@media screen and (max-width: 768px) {
+  .alsoLikeProductDiv:nth-child(1) .imagesBack {
+    background-image: url(../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg);
+  }
+}
+.alsoLikeProductDiv:nth-child(2) .imagesBack {
+  background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg);
+}
+@media screen and (max-width: 768px) {
+  .alsoLikeProductDiv:nth-child(2) .imagesBack {
+    background-image: url(../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg);
+  }
+}
+.alsoLikeProductDiv:nth-child(3) .imagesBack {
+  background-image: url(../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg);
+}
+@media screen and (max-width: 768px) {
+  .alsoLikeProductDiv:nth-child(3) .imagesBack {
+    background-image: url(../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg);
+  }
+}
+
+.col:nth-child(1) {
+  background-image: url(../assets/product-zx7-speaker/desktop/image-gallery-1.jpg);
+}
+@media screen and (max-width: 768px) {
+  .col:nth-child(1) {
+    background-image: url(../assets/product-zx7-speaker/tablet/image-gallery-1.jpg);
+  }
+}
+@media screen and (max-width: 480px) {
+  .col:nth-child(1) {
+    background-image: url(../assets/product-zx7-speaker/mobile/image-gallery-1.jpg);
+  }
+}
+
+.col:nth-child(2) {
+  background-image: url(../assets/product-zx7-speaker/desktop/image-gallery-3.jpg);
+}
+@media screen and (max-width: 768px) {
+  .col:nth-child(2) {
+    background-image: url(../assets/product-zx7-speaker/tablet/image-gallery-3.jpg);
+  }
+}
+@media screen and (max-width: 480px) {
+  .col:nth-child(2) {
+    background-image: url(../assets/product-zx7-speaker/mobile/image-gallery-3.jpg);
+  }
+}
+
+.col:nth-child(3) {
+  background-image: url(../assets/product-zx7-speaker/desktop/image-gallery-2.jpg);
+}
+@media screen and (max-width: 768px) {
+  .col:nth-child(3) {
+    background-image: url(../assets/product-zx7-speaker/tablet/image-gallery-2.jpg);
+  }
+}
+@media screen and (max-width: 480px) {
+  .col:nth-child(3) {
+    background-image: url(../assets/product-zx7-speaker/mobile/image-gallery-2.jpg);
+  }
+}
+
+/*# sourceMappingURL=product-zx7-speaker.css.map */

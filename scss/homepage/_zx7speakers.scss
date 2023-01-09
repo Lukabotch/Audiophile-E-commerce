@@ -1,0 +1,54 @@
+@import "../mixins";
+.zx7speaker {
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 50px auto 0 auto;
+  width: 100%;
+  height: 320px;
+  opacity: 0;
+  background-image: url(../assets/home/desktop/image-speaker-zx7.jpg);
+  transition: opacity 0.9s;
+  h2 {
+    height: 38px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  button {
+    width: 160px;
+    height: 48px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+  @include media("lg"){
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/home/tablet/image-speaker-zx7.jpg);
+    background-repeat: no-repeat;
+  }
+  @include media('sm'){
+        background-image: url(../assets/home/mobile/image-speaker-zx7.jpg);
+
+  }
+}

@@ -1,0 +1,102 @@
+@import "../mixins";
+.productDiv {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 560px;
+  gap: 25px;
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+    .productRight {
+      padding: 0;
+    }
+    @include media("lg") {
+      flex-direction: column;
+    }
+  }
+  .productLeft {
+    width: 50%;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    @include media("lg") {
+      width: 100%;
+      height: 352px;
+    }
+  }
+  .productRight {
+    padding-left: 140px;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h6 {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: #d87d4a;
+    }
+    h1 {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 4.4rem;
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+      color: #000000;
+      @include media("sm") {
+        font-size: 2.8rem;
+        margin-left: 20px;
+        margin-right: 20px;
+        line-height: 1;
+      }
+    }
+    p {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    a {
+      button {
+        border: none;
+        width: 160px;
+        height: 48px;
+        background: #d87d4a;
+        font-family: Manrope;
+        font-size: 1.3rem;
+        line-height: 1.776rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.4s;
+        &:hover {
+          background-color: #fbaf85;
+        }
+      }
+    }
+    @include media("lg") {
+      width: 100%;
+      text-align: center;
+      padding-left: 0px;
+    }
+  }
+  @include media("lg") {
+    flex-direction: column;
+    height: auto;
+  }
+}

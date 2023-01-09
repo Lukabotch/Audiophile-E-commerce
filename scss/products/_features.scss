@@ -1,0 +1,75 @@
+.features {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  width: 100%;
+  gap: 25px;
+  margin-top: 163px;
+  h1 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 1.14286px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  span {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #d87d4a;
+  }
+  @include media("md") {
+    flex-direction: column;
+    margin-top: 122px;
+  }
+}
+.featuresLeft {
+  width: 55%;
+  @include media("md") {
+    width: 100%;
+  }
+}
+.featuresRight {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+
+  .gifts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    div {
+      display: flex;
+      gap: 10px;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  @include media("md") {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    h1 {
+      width: 50%;
+    }
+  }
+  @include media("sm") {
+    flex-direction: column;
+  }
+}

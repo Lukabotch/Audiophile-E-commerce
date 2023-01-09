@@ -1,0 +1,1561 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+.dark-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transition: 0.9s;
+}
+
+.dark-overlay2 {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: 0.9s;
+}
+
+.burger {
+  display: none;
+}
+
+.burgerMenu {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  z-index: 5;
+  width: 95%;
+}
+@media screen and (max-width: 927px) {
+  .burgerMenu {
+    margin: auto;
+    width: 100%;
+    margin-top: -100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #ffffff;
+    padding: 70px 10px 70px 10px;
+    transition: opacity 0.7s, margin 0.7s;
+  }
+  .burgerMenu .categoriesTittle {
+    height: 25px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .burgerMenu .shop1,
+  .burgerMenu .shop2,
+  .burgerMenu .shop3 {
+    height: 18px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+  .burgerMenu span {
+    margin-left: 5px;
+    color: #d87d4a;
+    width: 5px;
+    height: 10px;
+    font-size: 2rem;
+    font-family: "Manrope";
+    font-weight: 700;
+  }
+  .burgerMenu a {
+    text-decoration: none;
+    width: 32%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+  }
+  .burgerMenu a {
+    width: 90%;
+  }
+}
+
+#indexNavbar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #191919;
+  align-items: center;
+  width: 1110px;
+  height: 89px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+  box-sizing: border-box;
+}
+#indexNavbar .mobileLogo {
+  display: none;
+}
+#indexNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#indexNavbar ul li:first-child a {
+  color: #d87d4a;
+}
+#indexNavbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+}
+#indexNavbar ul li a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 1110px) {
+  #indexNavbar {
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 927px) {
+  #indexNavbar {
+    z-index: 2;
+  }
+  #indexNavbar ul {
+    display: none;
+  }
+  #indexNavbar .leftNav .burger {
+    display: block;
+    margin-top: 5px;
+  }
+  #indexNavbar .leftNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #indexNavbar .mobileLogo {
+    display: block;
+  }
+  #indexNavbar .leftNav {
+    gap: 0px;
+  }
+  #indexNavbar .leftNav .desktopLogo {
+    display: none;
+  }
+}
+
+/* below is card popup styling */
+.productListCard {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seeMyProduct {
+  gap: 25px;
+  position: fixed;
+  width: 377px;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+  right: 200px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .seeMyProduct {
+    right: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .seeMyProduct {
+    width: 90%;
+  }
+}
+
+.firstCart {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartQuantity {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.firstCart a {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-decoration-line: underline;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.firstCart a:hover {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.productQuantity {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantityOfProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 32px;
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 480px) {
+  .quantityOfProduct {
+    width: 85px;
+  }
+}
+
+.quantityOfProduct div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quantityOfProduct div:nth-child(2n) {
+  height: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+}
+.quantityOfProduct div:first-child, .quantityOfProduct div:last-child {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.25;
+}
+
+.quantityOfProduct div:first-child:hover,
+.quantityOfProduct div:last-child:hover {
+  color: #d87d4a;
+  opacity: 1;
+  background-color: #e3e3e3;
+}
+
+.minSpecificationProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 64px;
+}
+
+.minSpecificationProduct article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.minSpecificationProduct img {
+  width: 64px;
+  border-radius: 8px;
+}
+.minSpecificationProduct h6 {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  margin: 0;
+}
+.minSpecificationProduct p {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+.totalPrice p {
+  margin: 0;
+}
+.totalPrice p:first-child {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.totalPrice p:last-child {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.goToCheckout {
+  display: flex;
+  width: 95%;
+  height: 48px;
+}
+.goToCheckout a {
+  width: 100%;
+  height: 100%;
+  background: #d87d4a;
+  font-family: "Manrope";
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.categories {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: 0.3s;
+  margin-top: 170px;
+}
+.categories .categoriesTittle {
+  height: 25px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.categories span {
+  margin-left: 5px;
+  color: #d87d4a;
+  width: 5px;
+  height: 10px;
+  font-size: 2rem;
+  font-family: "Manrope";
+  font-weight: 700;
+}
+.categories a {
+  text-decoration: none;
+  width: 32%;
+}
+@media screen and (max-width: 480px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+  }
+  .categories a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .categories .categoriesTittle {
+    font-size: 1.5rem;
+  }
+}
+
+.eachCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.eachCategories img {
+  margin-top: -40px;
+  width: 130.49px;
+  height: 120px;
+}
+.eachCategories:hover .shop1 {
+  color: #d87d4a;
+  opacity: 1;
+}
+.eachCategories:hover .shop2 {
+  color: #d87d4a;
+  opacity: 1;
+}
+.eachCategories:hover .shop3 {
+  color: #d87d4a;
+  opacity: 1;
+}
+
+.categories .shop1,
+.shop2,
+.shop3 {
+  height: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.shopDiv {
+  margin-left: 10px;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.shopDiv span {
+  margin-top: -22px;
+}
+
+.advertisment {
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 588px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.9s;
+}
+@media screen and (max-width: 927px) {
+  .advertisment {
+    flex-direction: column-reverse;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.advertImage {
+  background-image: url(../assets/shared/desktop/image-best-gear.jpg);
+  width: 49%;
+  height: 100%;
+  border-radius: 8px;
+  background-position: center;
+}
+@media screen and (max-width: 927px) {
+  .advertImage {
+    width: 100%;
+    background-image: url(../assets/shared/tablet/image-best-gear.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .advertImage {
+    background-image: url(../assets/shared/mobile/image-best-gear.jpg);
+    height: 300px;
+    background-size: cover;
+  }
+}
+
+.advertArticle {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 1px;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.advertArticle h1 {
+  width: 90%;
+  margin-bottom: 20px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.advertArticle p {
+  width: 93%;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media screen and (max-width: 927px) {
+  .advertArticle {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.bestGear {
+  color: #d87d4a;
+}
+
+.homeFooter {
+  margin-top: 200px;
+  width: 100%;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeFooter #footerNavbar {
+  background-color: #101010;
+  border: none;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.homeFooter #footerNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.homeFooter #footerNavbar ul li:first-child a {
+  color: #d87d4a;
+}
+.homeFooter #footerNavbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+}
+.homeFooter #footerNavbar ul li a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 927px) {
+  .homeFooter #footerNavbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .homeFooter #footerNavbar ul {
+    padding: 0;
+  }
+  .homeFooter #footerNavbar ul li a {
+    margin: 0 25px 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homeFooter #footerNavbar {
+    align-items: center;
+  }
+  .homeFooter #footerNavbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .homeFooter #footerNavbar ul li a {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 927px) {
+  .homeFooter {
+    width: 100%;
+  }
+}
+
+.homeFooter #footerNavbar ul li:first-child a {
+  color: #ffffff;
+}
+
+.homeFooter #footerNavbar ul li:first-child a:hover {
+  color: #d87d4a;
+}
+
+.middleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.aboutUs {
+  font-family: Manrope;
+  font-weight: 400;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 0.5;
+  width: 50%;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .aboutUs {
+    width: 100%;
+  }
+}
+
+.middleFooter .socIcons {
+  display: flex;
+  gap: 15px;
+}
+.middleFooter .socIcons img:hover {
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(0deg) brightness(0.9);
+}
+@media screen and (max-width: 480px) {
+  .middleFooter .socIcons {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .middleFooter {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.middleFooter img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.middleFooter img:hover {
+  filter: brightness(150%);
+}
+
+.innerFooter {
+  width: 1110px;
+}
+@media screen and (max-width: 1110px) {
+  .innerFooter {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .innerFooter {
+    width: 97%;
+  }
+}
+
+.lastElementFooter {
+  padding: 15px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+@media screen and (max-width: 480px) {
+  .lastElementFooter {
+    text-align: center;
+  }
+}
+
+.socIconsForMobile {
+  display: none;
+  gap: 15px;
+}
+@media screen and (max-width: 480px) {
+  .socIconsForMobile {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+}
+
+#homeHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #191919;
+}
+
+.mainDiv {
+  margin: auto;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1110px) {
+  .mainDiv {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 927px) {
+  .mainDiv {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainDiv {
+    width: 90%;
+  }
+}
+
+.seeMainProduct {
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  font-family: Manrope;
+  font-size: 1.3rem;
+  line-height: 1.776rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.seeMainProduct:hover {
+  background-color: #fbaf85;
+}
+
+.goBack {
+  margin-top: 50px;
+}
+.goBack h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 20%;
+}
+.goBack h6:hover {
+  text-decoration: underline;
+}
+
+html {
+  font-size: 10px;
+}
+
+.goBack {
+  margin-top: 50px;
+}
+.goBack h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 20%;
+}
+.goBack h6:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+#indexNavbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+#indexNavbar ul li:nth-child(1n) a {
+  color: #ffffff;
+}
+#indexNavbar ul li:nth-child(1n) a:hover {
+  color: #d87d4a;
+}
+@media screen and (max-width: 927px) {
+  #indexNavbar ul {
+    display: none;
+  }
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billingAdress {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  gap: 26px;
+}
+.billingAdress .billingName,
+.billingAdress .billingEmail,
+.billingAdress .billingMobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 81px;
+  box-sizing: content-box;
+}
+.billingAdress .billingName h6,
+.billingAdress .billingEmail h6,
+.billingAdress .billingMobile h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.214286px;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.billingAdress .billingName input,
+.billingAdress .billingEmail input,
+.billingAdress .billingMobile input {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.3s;
+}
+.billingAdress .billingName input:focus,
+.billingAdress .billingEmail input:focus,
+.billingAdress .billingMobile input:focus {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+.billingAdress .billingName input:hover,
+.billingAdress .billingEmail input:hover,
+.billingAdress .billingMobile input:hover {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+@media screen and (max-width: 480px) {
+  .billingAdress {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.checkoutMain {
+  width: 730px;
+  background-color: #ffffff;
+  padding: 45px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.checkoutMain h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.928571px;
+  text-transform: uppercase;
+  color: #d87d4a;
+  margin-top: 70px;
+}
+@media screen and (max-width: 1110px) {
+  .checkoutMain {
+    width: 100%;
+  }
+}
+
+.shippingInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 26px;
+}
+.shippingInfo .shippingAdress,
+.shippingInfo .shippingCity,
+.shippingInfo .shippingCountry,
+.shippingInfo .shippingZipcode {
+  display: flex;
+  flex-direction: column;
+  width: 47.9%;
+  height: 81px;
+  box-sizing: border-box;
+}
+.shippingInfo .shippingAdress h6,
+.shippingInfo .shippingCity h6,
+.shippingInfo .shippingCountry h6,
+.shippingInfo .shippingZipcode h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.214286px;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.shippingInfo .shippingAdress input,
+.shippingInfo .shippingCity input,
+.shippingInfo .shippingCountry input,
+.shippingInfo .shippingZipcode input {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.3s;
+}
+.shippingInfo .shippingAdress input:focus,
+.shippingInfo .shippingCity input:focus,
+.shippingInfo .shippingCountry input:focus,
+.shippingInfo .shippingZipcode input:focus {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+.shippingInfo .shippingAdress input:hover,
+.shippingInfo .shippingCity input:hover,
+.shippingInfo .shippingCountry input:hover,
+.shippingInfo .shippingZipcode input:hover {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+.shippingInfo .shippingAdress {
+  width: 100%;
+}
+@media screen and (max-width: 927px) {
+  .shippingInfo .shippingCity,
+  .shippingInfo .shippingCountry,
+  .shippingInfo .shippingZipcode {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shippingInfo {
+    flex-direction: column;
+  }
+  .shippingInfo .shippingCity,
+  .shippingInfo .shippingCountry,
+  .shippingInfo .shippingZipcode {
+    width: 100%;
+  }
+}
+
+.emoney {
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 8px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  transition: border 0.3s;
+}
+.emoney h5 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000000;
+}
+.emoney .radioStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+}
+.emoney .radioStyle input {
+  display: none;
+}
+.emoney .radioStyle span {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #d87d4a;
+  display: none;
+}
+.emoney .radioStyle input:checked + span {
+  display: inline-block;
+}
+.emoney:hover {
+  border: 2px solid #d87d4a;
+}
+
+.cashOnDelivery {
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 8px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  transition: border 0.3s;
+}
+.cashOnDelivery h5 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000000;
+}
+.cashOnDelivery .radioStyle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+}
+.cashOnDelivery .radioStyle2 input {
+  display: none;
+}
+.cashOnDelivery .radioStyle2 span {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #d87d4a;
+  display: none;
+}
+.cashOnDelivery .radioStyle2 input:checked + span {
+  display: inline-block;
+}
+.cashOnDelivery:hover {
+  border: 2px solid #d87d4a;
+}
+
+.chooseMethod {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 48%;
+}
+@media screen and (max-width: 480px) {
+  .chooseMethod {
+    width: 100%;
+  }
+}
+
+.paymentMethods {
+  display: flex;
+  justify-content: space-between;
+}
+.paymentMethods p {
+  margin: 0;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.214286px;
+  color: #000000;
+}
+@media screen and (max-width: 480px) {
+  .paymentMethods {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.emoneyCash {
+  margin-top: 30px;
+}
+
+.emoneyDetails {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.emoneyDetails div {
+  display: flex;
+  flex-direction: column;
+  width: 47.9%;
+  height: 81px;
+  box-sizing: border-box;
+}
+.emoneyDetails div h6 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.214286px;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.emoneyDetails div input {
+  background: #ffffff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  padding: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.3s;
+}
+.emoneyDetails div input:focus {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+.emoneyDetails div input:hover {
+  opacity: 1;
+  border: 2px solid #d87d4a;
+}
+@media screen and (max-width: 480px) {
+  .emoneyDetails {
+    flex-direction: column;
+  }
+  .emoneyDetails div {
+    width: 100%;
+  }
+}
+
+.cashShape {
+  display: none;
+  align-items: center;
+  gap: 30px;
+}
+.cashShape p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.cashShape img {
+  width: 48px;
+  height: 48px;
+}
+
+.mainField {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+@media screen and (max-width: 927px) {
+  .mainField {
+    flex-direction: column;
+  }
+}
+
+#seeMyProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  visibility: visible;
+  opacity: 1;
+  position: inherit;
+  width: 350px;
+  margin-top: 110px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 927px) {
+  #seeMyProduct {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+.xProduct {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: right;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.totalPriceMain {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#totalPrice p:last-child {
+  color: #d87d4a;
+}
+
+.dark-overlay3 {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transition: opacity 0.9s;
+}
+
+.buyPopup {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  position: fixed;
+  width: 540px;
+  min-height: 300px;
+  background-color: #ffffff;
+  margin: auto;
+  z-index: 4;
+  border-radius: 8px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+}
+.buyPopup img {
+  width: 64px;
+}
+.buyPopup h1 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.buyPopup p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.buyPopup button {
+  background: #d87d4a;
+  height: 48px;
+  width: 100%;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.buyPopup button:hover {
+  background-color: #fbaf85;
+}
+.buyPopup a {
+  margin-top: 45px;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .buyPopup a {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .buyPopup {
+    width: 70%;
+  }
+}
+
+.afterNavbar {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.grandTotalProduct {
+  display: flex;
+  justify-content: center;
+  height: 140px;
+  align-items: center;
+}
+.grandTotalProduct .grandTotalLeft {
+  width: 55%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.grandTotalProduct .grandTotalRight {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #000000;
+  height: 100%;
+  width: 45%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.grandTotalProduct .grandTotalRight p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.grandTotalProduct .grandTotalRight h3 {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  .grandTotalProduct {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .grandTotalProduct .grandTotalLeft {
+    width: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .grandTotalProduct .grandTotalRight {
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .grandTotalProduct .grandTotalRight h3 {
+    margin: 0;
+  }
+}
+
+.continue {
+  width: 100%;
+  height: 100%;
+  background: #d87d4a;
+  font-family: "Manrope";
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: background-color 0.3s;
+  border: none;
+}
+.continue:hover {
+  background-color: #fbaf85;
+}
+
+/*# sourceMappingURL=checkout.css.map */

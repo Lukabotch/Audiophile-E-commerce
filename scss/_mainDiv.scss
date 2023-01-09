@@ -1,0 +1,15 @@
+.mainDiv {
+  margin: auto;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  @include media("xl") {
+    width: 95%;
+  }
+  @include media("lg") {
+    width: 90%;
+  }
+  @include media("sm") {
+    width: 90%;
+  }
+}
