@@ -527,6 +527,9 @@ body {
   @include media("md") {
     width: 70%;
   }
+  @include media("sm") {
+    position: absolute;
+  }
 }
 .afterNavbar {
   margin-top: 20px;
